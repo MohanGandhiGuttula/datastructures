@@ -1,0 +1,16 @@
+public class BubbleSort {
+
+	public void sortData(int[] inputData) {
+		for (int unsortedIndex = inputData.length-1; unsortedIndex >0; unsortedIndex--) {
+			// traverse array and sort.
+			for (int j = 0; j < unsortedIndex; j++) {
+				if (inputData[j] > inputData[j + 1]) {
+					// swap and push bigger number to right.
+					int temp = inputData[j + 1];
+					inputData[j + 1] = inputData[j];
+					inputData[j] = temp;
+				}
+			}
+		}
+	}
+}
